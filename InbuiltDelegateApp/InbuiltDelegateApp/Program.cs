@@ -8,7 +8,31 @@
 
 //CaseStudy3();
 
+//CaseStudy4();
 
+CaseStudy5();
+
+void CaseStudy5()
+{
+    Func<int,bool> functPtr = IsEvenNumber;
+
+    if (functPtr(3))
+    {
+        Console.WriteLine("is even via func");
+    }
+    else
+        Console.WriteLine("is odd via func");
+}
+
+void CaseStudy4()
+{
+    Predicate<int> predicatePtr = IsEvenNumber;
+
+    if (predicatePtr(3)) {
+        Console.WriteLine("is even");
+    }else
+        Console.WriteLine("is odd");
+}
 
 void CaseStudy3()
 {
@@ -23,6 +47,13 @@ void CaseStudy2()
     Console.WriteLine(fntptr());
 
 
+}
+
+bool IsEvenNumber(int input) { 
+
+     if(input % 2 ==0)
+        return true;
+     else return false;
 }
 
 double GetRandomNo()
