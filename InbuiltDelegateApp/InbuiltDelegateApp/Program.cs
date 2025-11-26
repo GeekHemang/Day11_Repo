@@ -8,7 +8,40 @@
 
 //CaseStudy3();
 
+CaseStudy4();
 
+void CaseStudy4()
+{
+    Func<int, bool> fnptr = IsEvenNumber;
+    Console.Write("Enter a number");
+    int no = int.Parse(Console.ReadLine());
+    bool result1 = fnptr(no);
+
+    if (result1 == true)
+    {
+        Console.WriteLine("Result is even as your number is this:" +no);
+
+    }
+    else
+    {
+        Console.WriteLine("Result is odd as your number is this:" + no);
+    }
+
+        Predicate<int> pdptr;
+    pdptr = IsEvenNumber;
+    bool result2 = pdptr.Invoke(1);
+
+    Console.WriteLine("result:" + result2);
+ }
+
+
+bool IsEvenNumber(int number)
+{
+    if (number % 2 == 0)
+    return true;
+
+    return false;
+}
 
 void CaseStudy3()
 {
