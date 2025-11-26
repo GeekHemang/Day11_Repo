@@ -25,11 +25,13 @@ namespace WinFormsEventApp
         }
 
         void CallBack1(object sender,EventArgs e) {
-
+           
             MessageBox.Show("God is listening!!");
         }
+      
         void CallBack2(object sender, EventArgs e)
         {
+           
 
             MessageBox.Show("Devil is listening!!");
         }
